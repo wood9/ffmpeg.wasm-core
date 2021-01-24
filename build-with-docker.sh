@@ -7,6 +7,7 @@ EM_VERSION=2.0.8
 docker pull emscripten/emsdk:$EM_VERSION
 docker run \
   --rm \
+  --privileged \
   -v $PWD:/src \
   -v $PWD/wasm/cache:/emsdk_portable/.data/cache/wasm \
   emscripten/emsdk:$EM_VERSION \

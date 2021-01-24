@@ -33,7 +33,7 @@ BUILD_DIR=$ROOT_DIR/build
 # Toolchain file path for cmake
 TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
-CFLAGS="-s USE_PTHREADS=1 -I$BUILD_DIR/include $OPTIM_FLAGS"
+CFLAGS="-I$BUILD_DIR/include $OPTIM_FLAGS"
 LDFLAGS="$CFLAGS -L$BUILD_DIR/lib"
 FFMPEG_CONFIG_FLAGS_BASE=(
   --target-os=none        # use none to prevent any os specific configurations
