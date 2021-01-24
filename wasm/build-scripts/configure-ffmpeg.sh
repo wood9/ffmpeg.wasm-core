@@ -23,7 +23,6 @@ FLAGS=(
   --disable-doc
   --disable-swresample
   --disable-postproc 
-  --disable-avfilter
   --disable-pthreads
   --disable-w32threads
   --disable-os2threads
