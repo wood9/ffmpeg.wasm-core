@@ -18,6 +18,20 @@ FLAGS=(
   --enable-libvorbis      # enable libvorbis
   --enable-libopus        # enable opus
   --enable-libwebp        # enable libwebp
+  --disable-ffplay
+  --disable-ffprobe
+  --disable-ffserver
+  --disable-doc
+  --disable-swresample
+  --disable-postproc 
+  --disable-avfilter
+  --disable-pthreads
+  --disable-w32threads
+  --disable-os2threads
+  --disable-network
+  --disable-everything
+  --disable-asm
+  --disable-debug
   # --enable-libaom         # enable libaom
 )
 echo "FFMPEG_CONFIG_FLAGS=${FLAGS[@]}"
