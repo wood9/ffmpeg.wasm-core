@@ -31,7 +31,7 @@ $SCRIPT_ROOT/build-theora.sh
 # build opus
 $SCRIPT_ROOT/build-opus.sh
 # build freetype2
-$SCRIPT_ROOT/build-freetype2.sh
+# $SCRIPT_ROOT/build-freetype2.sh
 # build libwebp
 $SCRIPT_ROOT/build-libwebp.sh
 # build aom (disabled as it is extremely slow)
