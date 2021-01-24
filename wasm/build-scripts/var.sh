@@ -10,14 +10,13 @@ export PATH=$PATH:$EMSDK/upstream/bin
 # Flags for code optimization, focus on speed instead
 # of size
 OPTIM_FLAGS=(
-  -O3
+  -O1
 )
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Use closure complier only in linux environment
   OPTIM_FLAGS=(
     "${OPTIM_FLAGS[@]}"
-    --closure 1
   )
 fi
 
