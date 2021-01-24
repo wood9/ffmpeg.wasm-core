@@ -79,12 +79,6 @@ $ npm test
 | vorbis | 1.3.6 | ogg format |
 | opus | 1.3.1 | opus format |
 
-#### Image
-
-| Library/Tool Name | Version | Remark |
-| ----------------- | ------- | ------ |
-| libwebp | 1.1.0 | webp format |
-
 #### Others
 
 | Library/Tool Name | Version | Remark |
