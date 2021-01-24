@@ -4,7 +4,7 @@ set -euo pipefail
 source $(dirname $0)/var.sh
 
 LIB_PATH=third_party/opus
-CFLAGS="$OPTIM_FLAGS"
+CFLAGS="-s USE_PTHREADS=1 $OPTIM_FLAGS"
 CONF_FLAGS=(
   --prefix=$BUILD_DIR                                 # install library in a build directory for FFmpeg to include
   --host=i686-gnu                                     # use i686 linux

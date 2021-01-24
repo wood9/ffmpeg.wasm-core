@@ -4,7 +4,7 @@ set -euo pipefail
 source $(dirname $0)/var.sh
 
 LIB_PATH=third_party/x265/source
-CXXFLAGS="$OPTIM_FLAGS"
+CXXFLAGS="-s USE_PTHREADS=1 $OPTIM_FLAGS"
 BASE_FLAGS=(
   -DCMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_FILE
   -DENABLE_LIBNUMA=OFF

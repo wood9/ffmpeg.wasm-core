@@ -10,13 +10,14 @@ export PATH=$PATH:$EMSDK/upstream/bin
 # Flags for code optimization, focus on speed instead
 # of size
 OPTIM_FLAGS=(
-  -O1
+  -O3
 )
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Use closure complier only in linux environment
   OPTIM_FLAGS=(
     "${OPTIM_FLAGS[@]}"
+    --closure 1
   )
 fi
 
@@ -32,7 +33,7 @@ BUILD_DIR=$ROOT_DIR/build
 # Toolchain file path for cmake
 TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
-CFLAGS="-I$BUILD_DIR/include $OPTIM_FLAGS"
+CFLAGS="-s USE_PTHREADS=1 -I$BUILD_DIR/include $OPTIM_FLAGS"
 LDFLAGS="$CFLAGS -L$BUILD_DIR/lib"
 FFMPEG_CONFIG_FLAGS_BASE=(
   --target-os=none        # use none to prevent any os specific configurations

@@ -10,7 +10,7 @@ CONF_FLAGS=(
   --enable-static                                     # enable building static library
   --disable-cli                                       # disable cli tools
   --disable-asm                                       # disable asm optimization
-  --extra-cflags="-c $OPTIM_FLAGS"  # flags to use pthread and code optimization
+  --extra-cflags="-c -s USE_PTHREADS=1 $OPTIM_FLAGS"  # flags to use pthread and code optimization
 )
 echo "CONF_FLAGS=${CONF_FLAGS[@]}"
 (cd $LIB_PATH && emconfigure ./configure "${CONF_FLAGS[@]}")

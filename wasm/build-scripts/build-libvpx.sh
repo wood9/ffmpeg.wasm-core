@@ -4,7 +4,7 @@ set -euo pipefail
 source $(dirname $0)/var.sh
 
 LIB_PATH=third_party/libvpx
-FLAGS="-c $OPTIM_FLAGS"
+FLAGS="-c -s USE_PTHREADS=1 $OPTIM_FLAGS"
 CONF_FLAGS=(
   --prefix=$BUILD_DIR                                # install library in a build directory for FFmpeg to include
   --target=generic-gnu                               # target with miminal features
