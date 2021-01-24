@@ -20,7 +20,6 @@ FLAGS=(
   --enable-libwebp        # enable libwebp
   --disable-ffplay
   --disable-ffprobe
-  --disable-ffserver
   --disable-doc
   --disable-swresample
   --disable-postproc 
