@@ -20,12 +20,12 @@ FLAGS=(
   --enable-libwebp        # enable libwebp
   --disable-ffplay        # ----------------------
   --disable-doc
-  --disable-postproc 
+  # --disable-postproc 
   --disable-pthreads
   --disable-w32threads
   --disable-os2threads
-  --disable-network
-  --disable-asm
+  # --disable-network
+  # --disable-asm
   --disable-debug
   # --enable-libaom         # enable libaom
 )
