@@ -19,6 +19,7 @@ FLAGS=(
   --enable-libopus        # enable opus
   --enable-libwebp        # enable libwebp
   --disable-ffplay        # ----------------------
+  --enable-protocol=file
   --disable-doc
   # --disable-postproc 
   --disable-pthreads

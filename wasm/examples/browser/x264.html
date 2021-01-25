@@ -26,10 +26,12 @@
         const OUT_FILE_NAME = 'video.mp4';
         const args = ['-i', IN_FILE_NAME, OUT_FILE_NAME];
         message.innerHTML = 'Writing file to MEMFS';
+        
         const data = new Uint8Array(await readFromBlobOrFile(files[0]));
         const now = Date.now();
         console.time(`[${now}] ${files[0].name} execution time`);
         message.innerHTML = 'Start to transcode';
+
         const { file } = await runFFmpeg(IN_FILE_NAME, data, args, OUT_FILE_NAME)
         const video = document.getElementById('output-video');
         video.src = URL.createObjectURL(new Blob([file.buffer], { type: 'video/mp4' }));

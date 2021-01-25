@@ -18,7 +18,10 @@ FLAGS=(
   -s EXPORT_NAME="createFFmpegCore"             # assign export name for browser
   -s EXPORTED_FUNCTIONS="[_main]"               # export main and proxy_main funcs
   -s EXTRA_EXPORTED_RUNTIME_METHODS="[FS, cwrap, ccall, setValue, writeAsciiToMemory]"   # export preamble funcs
-  -s INITIAL_MEMORY=536608768                  # 64 KB * 1024 * 16 * 2047 = 2146435072 bytes ~= 2 GB
+  #-s INITIAL_MEMORY=2146435072                  # 64 KB * 1024 * 16 * 2047 = 2146435072 bytes ~= 2 GB
+  -s ALLOW_MEMORY_GROWTH=1
+  -s TOTAL_MEMORY=33554432 
+  -s MAXIMUM_MEMORY=-1
   $OPTIM_FLAGS
 )
 echo "FFMPEG_EM_FLAGS=${FLAGS[@]}"
