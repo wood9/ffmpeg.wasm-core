@@ -13,7 +13,7 @@ $SCRIPT_ROOT/build-zlib.sh
 # build x264
 $SCRIPT_ROOT/build-x264.sh
 # build x265
-$SCRIPT_ROOT/build-x265.sh
+# $SCRIPT_ROOT/build-x265.sh
 # build libvpx
 $SCRIPT_ROOT/build-libvpx.sh
 # build WavPack
@@ -33,7 +33,7 @@ $SCRIPT_ROOT/build-opus.sh
 # build freetype2
 # $SCRIPT_ROOT/build-freetype2.sh
 # build libwebp
-$SCRIPT_ROOT/build-libwebp.sh
+# $SCRIPT_ROOT/build-libwebp.sh
 # build aom (disabled as it is extremely slow)
 # $SCRIPT_ROOT/build-aom.sh
 # configure FFmpeg with Emscripten

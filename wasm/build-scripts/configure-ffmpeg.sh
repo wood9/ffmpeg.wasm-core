@@ -9,7 +9,7 @@ FLAGS=(
   --enable-nonfree        # required by fdk-aac
   --enable-zlib           # enable zlib
   --enable-libx264        # enable x264
-  --enable-libx265        # enable x265
+  # --enable-libx265        # enable x265
   --enable-libvpx         # enable libvpx / webm
   --enable-libwavpack     # enable libwavpack
   --enable-libmp3lame     # enable libmp3lame
@@ -17,16 +17,27 @@ FLAGS=(
   --enable-libtheora      # enable libtheora
   --enable-libvorbis      # enable libvorbis
   --enable-libopus        # enable opus
-  --enable-libwebp        # enable libwebp
-  --disable-ffplay        # ----------------------
+  # --enable-libwebp        # enable libwebp
+  --enable-ffmpeg         # ----------------------
+  --enable-avcodec
+  --enable-avformat
+  --enable-avutil
+  --enable-swresample
+  --enable-swscale
+  --enable-avfilter
+  --disable-ffplay
+  --disable-d3d11va
+  --disable-dxva2
+  --disable-vaapi    
+  --disable-asm
+  --disable-vdpau
+  --disable-fast-unaligned
   --enable-protocol=file
-  --disable-doc
   # --disable-postproc 
   --disable-pthreads
   --disable-w32threads
   --disable-os2threads
-  # --disable-network
-  # --disable-asm
+  --disable-network
   --disable-debug
   # --enable-libaom         # enable libaom
 )
